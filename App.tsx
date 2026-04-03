@@ -1,11 +1,10 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import FullScreen from "./screen-wrappers/FullScreen";
+import Form from "./components/Form";
 
 export default function App() {
   return (
     <FullScreen>
-      <Text>Text</Text>
+      <Form></Form>
     </FullScreen>
   );
 }
