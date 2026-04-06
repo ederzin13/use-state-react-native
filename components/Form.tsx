@@ -1,15 +1,17 @@
-import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import { View, StyleSheet, Text } from "react-native";
+import React, { useState } from "react";
 import Title from "./Title";
 import Input from "./Input";
-import Btn from "./Button";
 
 export default function Form() {
+  const [accessAuthorized, setAccess] = useState<boolean>(false);
+
   return (
     <View style={styles.container}>
       <Title></Title>
-      <Input></Input>
-      <Btn></Btn>
+      {accessAuthorized && <Text>Acesso liberado</Text>}
+
+      {!accessAuthorized && <Input onAuthorize={() => setAccess(true)} />}
     </View>
   );
 }
