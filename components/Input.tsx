@@ -15,6 +15,7 @@ export default function Input() {
         <Greetings visitorName={name} />
         <Button
           title="Exit"
+          color="#6f0000"
           onPress={() => {
             setAccess(false);
             setName("");
